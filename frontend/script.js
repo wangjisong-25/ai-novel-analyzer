@@ -14,15 +14,8 @@ async function uploadFile() {
         document.getElementById("loading").classList.remove("hidden");
         document.getElementById("result").innerText = "";
 
-        // ==================== 🛠️ 核心修改：动态识别环境 ====================
-        // 判断当前是不是本地环境 (localhost 或 127.0.0.1)
-        const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-
-        // 如果是本地，用 8000 端口；如果是线上，用 Render 后端地址（这里先用占位符，等后端好了直接改这里）
-        const BACKEND_URL = isLocal
-            ? "http://127.0.0.1:8000"
-            : "https://ai-novel-analyzer.onrender.com";
-        // ==================================================================
+        // 🛠️ 强行写死为 Render 线上后端地址，断绝手机端误判本地的后路
+        const BACKEND_URL = "https://ai-novel-analyzer.onrender.com";
 
         // 将写死的地址替换为动态的 ${BACKEND_URL}/upload
         const response = await fetch(`${BACKEND_URL}/upload`, {
