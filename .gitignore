@@ -1,0 +1,12 @@
+# 忽略 Python 虚拟环境
+venv/
+.venv/
+env/
+
+# 忽略 Python 运行缓存
+__pycache__/
+*.pyc
+
+# 忽略编辑器本地配置
+.vscode/
+.DS_Store

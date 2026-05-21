@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI 小说分析器</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>AI 小说分析器</h1>
+
+        <p class="subtitle">
+            上传小说，AI 自动分析世界观、人物与文风
+        </p>
+
+        <div class="upload-box">
+
+            <input type="file" id="fileInput">
+
+            <button onclick="uploadFile()">
+                开始分析
+            </button>
+
+        </div>
+
+        <div id="loading" class="loading hidden">
+
+            AI 正在解析世界观...
+
+        </div>
+
+        <div id="result" class="result-box">
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
