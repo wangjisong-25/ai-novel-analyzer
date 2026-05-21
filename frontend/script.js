@@ -21,7 +21,7 @@ async function uploadFile() {
         // 如果是本地，用 8000 端口；如果是线上，用 Render 后端地址（这里先用占位符，等后端好了直接改这里）
         const BACKEND_URL = isLocal
             ? "http://127.0.0.1:8000"
-            : "https://你的后端地址.onrender.com";
+            : "https://ai-novel-analyzer.onrender.com";
         // ==================================================================
 
         // 将写死的地址替换为动态的 ${BACKEND_URL}/upload
