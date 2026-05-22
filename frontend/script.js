@@ -45,3 +45,12 @@ async function uploadFile() {
         document.getElementById("result").innerText = "请求失败：" + error;
     }
 }
+// 当用户选择了文件时，动态更新大卡片上显示的文件名
+document.getElementById('fileInput').addEventListener('change', function (e) {
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+    if (this.files && this.files.length > 0) {
+        fileNameDisplay.innerHTML = `已选择: <strong style="color: #2563eb;">${this.files[0].name}</strong>`;
+    } else {
+        fileNameDisplay.innerText = "点击或拖拽上传 .docx / .txt 小说文件";
+    }
+});

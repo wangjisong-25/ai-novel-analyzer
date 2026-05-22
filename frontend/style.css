@@ -306,3 +306,106 @@ button:hover {
     border-radius: 0 8px 8px 0;
     font-style: italic;
 }
+
+.upload-box button {
+    /* 你原本的按钮样式... */
+    transition: all 0.2s ease;
+    /* 👈 关键：让所有动画变丝滑 */
+    cursor: pointer;
+}
+
+/* 鼠标悬停：按钮变亮、微微放大、阴影加深 */
+.upload-box button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    /* 向上微动 2 像素 */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 鼠标点击瞬间：按钮缩回、阴影消失，模拟真实物理按键 */
+.upload-box button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* --- 现代上传大卡片与按钮微交互 --- */
+
+/* 让上传区域变成纵向排列的容器 */
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 自定义虚线上传卡片 */
+.custom-file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 20px;
+    border: 2px dashed #cbd5e1;
+    /* 漂亮的虚线边框 */
+    border-radius: 12px;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+    color: #64748b;
+    font-size: 14.5px;
+}
+
+/* 鼠标悬停在卡片上的效果 */
+.custom-file-upload:hover {
+    border-color: #2563eb;
+    /* 虚线变蓝 */
+    background-color: rgba(37, 99, 235, 0.02);
+    /* 背景微蓝 */
+    color: #2563eb;
+}
+
+.custom-file-upload:hover .upload-icon {
+    stroke: #2563eb;
+    /* 图标跟着变蓝 */
+    transform: translateY(-2px);
+    /* 图标微微往上漂浮 */
+}
+
+/* 图标动画过渡 */
+.upload-icon {
+    stroke: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+/* 升级版“开始分析”按钮，撑满且带物理反馈 */
+.analysis-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1);
+}
+
+/* 按钮鼠标悬停：微微浮起、阴影加深 */
+.analysis-btn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+}
+
+/* 按钮点击瞬间：真实凹陷按压感 */
+.analysis-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
