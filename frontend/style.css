@@ -98,3 +98,211 @@ button:hover {
         transform: rotate(360deg);
     }
 }
+
+/* 深度美化后的 Markdown 结果区域 */
+.result-box {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #fafafa;
+    /* 给结果区一个极淡的灰色底，像一张纸 */
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    line-height: 1.8;
+    /* 增大行高，极大地提升长文本阅读体验 */
+    color: #334155;
+    font-size: 15px;
+}
+
+/* 一级标题（如：# 核心结论） */
+.result-box h1 {
+    font-size: 24px;
+    color: #0f172a;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #2563eb;
+    /* 蓝色的底边线，非常有科技感 */
+    padding-bottom: 6px;
+}
+
+/* 二级和三级标题（如：### 1. 故事简介） */
+.result-box h2,
+.result-box h3 {
+    font-size: 18px;
+    color: #1e293b;
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+/* 给二级/三级标题左边加一根小蓝条，这是大厂文档的最爱设计 */
+.result-box h2::before,
+.result-box h3::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background-color: #2563eb;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+/* 加粗文本（如：**世界观：**） */
+.result-box strong {
+    color: #2563eb;
+    /* 把加粗的重点文字变成科技蓝，瞬间抓住视觉重点 */
+    font-weight: 600;
+    background-color: rgba(37, 99, 235, 0.05);
+    /* 淡淡的蓝色文字背景 */
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* 列表排版（如：1. 2. 3. 或者无序列表） */
+.result-box ul,
+.result-box ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.result-box li {
+    margin-bottom: 8px;
+    list-style-position: outside;
+}
+
+/* 段落间距优化 */
+.result-box p {
+    margin-bottom: 14px;
+}
+
+/* 如果 AI 返回了代码块或者行内代码，顺便也美化了 */
+.result-box code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #0f172a;
+    font-size: 14px;
+}
+
+/* 终极深度美化：现代编辑器质感的结果区域 */
+.result-box {
+    margin-top: 35px;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #fbfbfb);
+    /* 微妙的渐变底色 */
+    border-radius: 16px;
+    /* 更加圆润 */
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03);
+    /* 内外双层阴影，增加层次感 */
+    line-height: 1.9;
+    /* 极致舒适的阅读行高 */
+    color: #334155;
+    font-size: 15.5px;
+}
+
+/* 一级标题（如：# 核心结论）— 科技感渐变条 */
+.result-box h1 {
+    font-size: 26px;
+    color: #0f172a;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* 一级标题下方的渐变线条 */
+.result-box h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, rgba(37, 99, 235, 0.1));
+    /* 逐渐淡出的渐变条 */
+    border-radius: 2px;
+}
+
+/* 二级和三级标题（如：### 1. 故事简介） */
+.result-box h2,
+.result-box h3 {
+    font-size: 19px;
+    color: #1e293b;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+/* 标题左侧的高亮胶囊指示器 */
+.result-box h2::before,
+.result-box h3::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background: linear-gradient(to bottom, #3b82f6, #2563eb);
+    /* 纵向渐变蓝色小条 */
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* 核心重点：加粗文本（如：**世界观：**） */
+.result-box strong {
+    color: #1d4ed8;
+    /* 更稳重的深科技蓝 */
+    font-weight: 600;
+    background: rgba(37, 99, 235, 0.06);
+    /* 极为轻薄的蓝色背景衬托 */
+    padding: 3px 8px;
+    margin: 0 2px;
+    border-radius: 6px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    /* 微妙的边框，让重点文字像个小标签 */
+    font-size: 0.95em;
+}
+
+/* 列表容器排版优化 */
+.result-box ul,
+.result-box ol {
+    padding-left: 24px;
+    margin-bottom: 18px;
+}
+
+/* 列表单项：增加间距，让呼吸感更强 */
+.result-box li {
+    margin-bottom: 10px;
+    list-style-position: outside;
+}
+
+/* 段落间距与首字微调 */
+.result-box p {
+    margin-bottom: 16px;
+    text-align: justify;
+    /* 两端对齐，排版更像出版物 */
+}
+
+/* 斜体字美化（如：*修辞手法*） */
+.result-box em {
+    color: #64748b;
+    font-style: italic;
+    background-color: #f1f5f9;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* 引用块美化（如果 AI 返回了 > 引用文本） */
+.result-box blockquote {
+    margin: 20px 0;
+    padding: 12px 20px;
+    background-color: #f8fafc;
+    border-left: 4px solid #cbd5e1;
+    color: #475569;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}

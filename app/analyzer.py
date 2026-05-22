@@ -1,7 +1,13 @@
+import os
 import requests
+from dotenv import load_dotenv
 from .prompts import build_prompt
 
-API_KEY = "sk-kcqwmwxqdnvwoiybwrxunocblqrvyvhttrjiaqjrbcabysqp"
+# 加载 .env 文件中的环境变量
+load_dotenv()
+
+# 从环境变量中安全读取 API_KEY，如果没有读到就用空字符串，再也不怕代码外泄了！
+API_KEY = os.getenv("SILICONFLOW_API_KEY", "sk-kcqwmwxqdnvwoiybwrxunocblqrvyvhttrjiaqjrbcabysqp")
 
 def analyze_novel(text):
 

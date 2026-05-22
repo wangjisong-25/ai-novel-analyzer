@@ -10,3 +10,6 @@ __pycache__/
 # 忽略编辑器本地配置
 .vscode/
 .DS_Store
+
+# 忽略本地环境变量配置文件（防止 API_KEY 泄露到 GitHub）
+.env
