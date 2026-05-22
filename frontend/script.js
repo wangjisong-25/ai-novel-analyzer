@@ -11,6 +11,17 @@ async function uploadFile() {
         const formData = new FormData();
         formData.append("file", file);
 
+        // 在 uploadFile 函数开头添加：
+        const loadingDiv = document.getElementById("loading");
+        const loadingText = document.getElementById("loading-text");
+
+        loadingDiv.classList.remove("hidden");
+        loadingText.innerText = "正在拆解世界观架构..."; // 初始文案
+
+        // 使用计时器模拟 AI 的思考进度
+        setTimeout(() => { loadingText.innerText = "正在梳理人物关系..."; }, 2000);
+        setTimeout(() => { loadingText.innerText = "正在提炼剧情脉络..."; }, 4000);
+
         document.getElementById("loading").classList.remove("hidden");
         document.getElementById("result").innerText = "";
 
@@ -26,7 +37,8 @@ async function uploadFile() {
         const data = await response.json();
 
         document.getElementById("loading").classList.add("hidden");
-        document.getElementById("result").innerText = data.analysis;
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = marked.parse(data.analysis); // 这一行直接让文字变成 Markdown 样式！
 
     } catch (error) {
         document.getElementById("loading").classList.add("hidden");
